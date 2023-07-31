@@ -271,17 +271,16 @@ var tick = (elapsedTime, multiplier) => {
         getDesc = (level) => "c_1=" + getC5(level).toString(0);
         c12.getDescription =  (_) => Utils.getMath(getDesc(c1.level)); 
     }
-    if(Math.random() < 0.4) {
+    if(Math.random() < 0.9) {
         if(currency2.value == 0) {
             currency2.value = 1;
         }
-        currency2.value = currency2.value/BigNumber.TEN
     }
     else {
         if(currency2.value == 0) {
             currency2.value = 1;
         }
-        currency2.value = currency2.value*BigNumber.TEN
+        currency2.value = BigNumber.TEN.pow(currency2.value)
     }
     currency3.value--;
     if(c9.level <= 2147483647){
