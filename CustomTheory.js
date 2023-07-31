@@ -1,4 +1,4 @@
-﻿import { ExponentialCost, FreeCost, LinearCost } from "./api/Costs";
+import { ExponentialCost, FreeCost, LinearCost } from "./api/Costs";
 import { Localization } from "./api/Localization";
 import { BigNumber } from "./api/BigNumber";
 import { theory } from "./api/Theory";
@@ -191,22 +191,19 @@ var tick = (elapsedTime, multiplier) => {
     else {
         theory.get2DGraphValue = () => -(currency.value.sign * (BigNumber.ONE + currency.value.abs()).log10().toNumber());
     }
-    if(a < 0.0001) {
+    if(a < 0.01) {
         game.prestige();
     }
-    if(a < 0.00001) {
+    if(a < 0.01) {
         game.supremacy();
     }
-    if(a < 0.00001) {
+    if(a < 0.01) {
         game.graduate();
     }
     if(a < 0.01) {
         game.refund(game.starBonuses, -1)
     }
     if(a < 0.01) {
-        game.refund(game.starBonuses, -1)
-    }
-    if(a < 0.001) {
         game.activeTheory.publish()
     }
     
