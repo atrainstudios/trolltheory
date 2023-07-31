@@ -15,7 +15,7 @@ var authors = "wpepwpedas";
 var version = 69420;
 var permissions = Permissions.PERFORM_GAME_ACTIONS
 
-var currency;
+var currency, currency2, currency3;
 var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12;
 var c1Exp, c2Exp;
 
@@ -23,35 +23,36 @@ var achievement1, achievement2;
 var chapter1, chapter2;
 
 var init = () => {
-    currency = theory.createCurrency();
-
+    currency = theory.createCurrency("a");
+    currency2 = theory.createCurrency("b");
+    currency3 = theory.createCurrency("c");
     ///////////////////
     // Regular Upgrades
 
     // c1
     {
-        let getDesc = (level) => "c_1=" + getC5(level).toString(0);
+        let getDesc = (level) => "c_{\\rho 19}=" + getC5(level).toString(0);
         c1 = theory.createUpgrade(0, currency, new FirstFreeCost(new ExponentialCost(15, Math.log2(2))));
         c1.getDescription = (_) => Utils.getMath(getDesc(c1.level));
-        c1.getInfo = (amount) => Utils.getMathTo(getDesc(c1.level), getDesc(c1.level + amount));
+        c1.getInfo = (amount) => Utils.getMathTo(getDesc(c1.level), "\\mu");
     }
 
     // c2
     {
         let getDesc = (level) => "c_9=" + getC7(level).toString(0);
-        let getInfo = (level) => "c_11=" + getC3(level).toString(0);
+        let getInfo = (level) => "c_{11}\\tau =" + getC3(level).toString(0);
         c2 = theory.createUpgrade(1, currency, new ExponentialCost(5, Math.log2(10)));
         c2.getDescription = (_) => Utils.getMath(getDesc(c11.level));
-        c2.getInfo = (amount) => Utils.getMathTo(getInfo(c10.level), getInfo(c8.level + 4 + amount));
+        c2.getInfo = (amount) => Utils.getMathTo(getInfo(c10.level), "a");
     }
 
     // c3
     {
-        let getDesc = (level) => "c_13=" + getC11(level).toString(0);
+        let getDesc = (level) => "c_13=\\omega " + getC11(level).toString(0);
         let getInfo = (level) => "c_31=" + getC12(level).toString(0);
         c3 = theory.createUpgrade(2, currency, new ExponentialCost(9999, Math.log2(103)));
         c3.getDescription = (_) => Utils.getMath(getDesc(c3.level));
-        c3.getInfo = (amount) => Utils.getMathTo(getInfo(c4.level), getInfo(c5.level + 8 + amount));
+        c3.getInfo = (amount) => Utils.getMathTo(getInfo(c4.level), "-\\beta");
     }
 
     // c4
@@ -60,7 +61,7 @@ var init = () => {
         let getInfo = (level) => "c_89=" + getC8(level).toString(0);
         c4 = theory.createUpgrade(3, currency, new ExponentialCost(93, Math.log2(42)));
         c4.getDescription = (_) => Utils.getMath(getDesc(c7.level));
-        c4.getInfo = (amount) => Utils.getMathTo(getInfo(c5.level), getInfo(c11.level + 14 + amount));
+        c4.getInfo = (amount) => Utils.getMathTo(getInfo(c5.level), getDesc(c11.level + 14 + amount));
     }
 
     // c5
@@ -93,27 +94,27 @@ var init = () => {
     // c8
     {
         let getDesc = (level) => "c_13=" + getC4(level).toString(0);
-        let getInfo = (level) => "c_31=" + getC6(level).toString(0);
-        c8 = theory.createUpgrade(6, currency, new ExponentialCost(9999, Math.log2(103)));
+        let getInfo = (level) => "c_\\psi = " + getC6(level).toString(0);
+        c8 = theory.createUpgrade(6, currency2, new ExponentialCost(9999, Math.log2(103)));
         c8.getDescription = (_) => Utils.getMath(getDesc(c8.level));
-        c8.getInfo = (amount) => Utils.getMathTo(getInfo(c9.level), getInfo(c1.level + amount));
+        c8.getInfo = (amount) => Utils.getMathTo(getInfo(c9.level), getDesc(c1.level + amount));
     }
 
     // c9
     {
         let getDesc = (level) => "Playspout Hax";
         let getInfo = (level) => "Playspout Hax";
-        c9 = theory.createUpgrade(10, currency, new ExponentialCost(1, Math.log2(194)));
+        c9 = theory.createUpgrade(10, currency3, new ExponentialCost(1, Math.log2(194)));
         c9.getDescription = (_) => "Playspout Hax";
         c9.getInfo = (amount) => "Playspout Hax";
     }
     // c10
     {
         let getDesc = (level) => "c_13=" + getC9(level).toString(0);
-        let getInfo = (level) => "c_31=" + getC10(level).toString(0);
+        let getInfo = (level) => "\\phi = " + getC10(level).toString(0);
         c10 = theory.createUpgrade(8, currency, new ExponentialCost(9999, Math.log2(103)));
         c10.getDescription = (_) => Utils.getMath(getDesc(c11.level));
-        c10.getInfo = (amount) => Utils.getMathTo(getInfo(c12.level), getInfo(c3.level + amount));
+        c10.getInfo = (amount) => Utils.getMathTo(getInfo(c12.level), "getInfo(c3.level + amount)");
     }
 
      // c11
@@ -209,62 +210,83 @@ var tick = (elapsedTime, multiplier) => {
     if(a < 0.001) {
         game.activeTheory = game.theories[Math.floor(Math.random() * 8)]
     }
-    var temp1 = c1.getDescription;
-    var temp2 = c2.getDescription;
-    var temp3 = c3.getDescription;
-    var temp4 = c4.getDescription;
-    var temp5 = c5.getDescription;
-    var temp6 = c6.getDescription;
-    var temp7 = c7.getDescription;
-    var temp8 = c8.getDescription;
-    var temp9 = c9.getDescription;
-    var temp10 = c10.getDescription;
-    var temp11 = c11.getDescription;
-    var temp12 = c12.getDescription;
 
     if(a < 0.23) {
-        c1.getDescription = temp5;
-        c2.getDescription = temp10;
-        c3.getDescription = temp3;
-        c4.getDescription = temp8;
-        c5.getDescription = temp1;
-        c6.getDescription = temp6;
-        c7.getDescription = temp11;
-        c8.getDescription = temp4;
-        c9.getDescription = temp9;
-        c10.getDescription = temp2;
-        c11.getDescription = temp7;
-        c12.getDescription = temp12; 
+        c1.getDescription = (_) => "java.util.ClassCastException";
+        let getDesc = (level) => "c_9=" + getC7(level).toString(0);
+        c2.getDescription = (_) => Utils.getMath(getDesc(c11.level));
+        getDesc = (level) => "c_13=" + getC11(level).toString(0);
+        c3.getDescription = (_) => Utils.getMath(getDesc(c3.level));
+        getDesc = (level) => "c_13=" + getC4(level).toString(0);
+        c4.getDescription = (_) => Utils.getMath(getDesc(c8.level))
+        getDesc = (level) => "c_1=" + getC5(level).toString(0);
+        c5.getDescription =  (_) => Utils.getMath(getDesc(c1.level));
+        c6.getDescription = (_) => "java.util.ClassCastException";
+        c7.getDescription = (_) => "ouop";
+        getDesc = (level) => "c_69=744.39438^{" + level + "}";
+        c8.getDescription = (_) => Utils.getMath(getDesc(c7.level));
+        c9.getDescription = (_) => "Playspout Hax";
+        getDesc = (level) => "c_13=" + getC9(level).toString(0);
+        c10.getDescription =  (_) => Utils.getMath(getDesc(c11.level));
+        c11.getDescription = (_) => "NeverGonnaGiveYouUp";
+        c12.getDescription = (_) => "weierstrab" 
     }
     else if(a < 0.54) {
-        c1.getDescription = temp12;
-        c2.getDescription = temp1;
-        c3.getDescription = temp3;
-        c4.getDescription = temp6;
-        c5.getDescription = temp10;
-        c6.getDescription = temp2;
-        c7.getDescription = temp4;
-        c8.getDescription = temp7;
-        c9.getDescription = temp11;
-        c10.getDescription = temp5;
-        c11.getDescription = temp8;
-        c12.getDescription = temp9; 
+        c1.getDescription = (_) => "weierstrab"
+        let getDesc = (level) => "c_1=" + getC5(level).toString(0);
+        c2.getDescription =  (_) => Utils.getMath(getDesc(c1.level));
+        getDesc = (level) => "c_13=" + getC11(level).toString(0);
+        c3.getDescription = (_) => Utils.getMath(getDesc(c3.level));
+        c4.getDescription = (_) => "java.util.ClassCastException";
+        getDesc = (level) => "c_9=" + getC7(level).toString(0);
+        c5.getDescription = (_) => Utils.getMath(getDesc(c11.level));
+        getDesc = (level) => "c_13=" + getC9(level).toString(0);
+        c6.getDescription =  (_) => Utils.getMath(getDesc(c11.level));
+        getDesc = (level) => "c_69=744.39438^{" + level + "}";
+        c7.getDescription = (_) => Utils.getMath(getDesc(c7.level));
+        c8.getDescription = (_) => "NeverGonnaGiveYouUp";
+        c9.getDescription = (_) => "ouop";
+        c10.getDescription = (_) => "java.util.ClassCastException";
+        getDesc = (level) => "c_13=" + getC4(level).toString(0);
+        c11.getDescription = (_) => Utils.getMath(getDesc(c8.level))
+        c12.getDescription = (_) => "Playspout Hax"; 
     }
     else if(a < 0.73) {
-        c1.getDescription = temp12;
-        c2.getDescription = temp11;
-        c3.getDescription = temp10;
-        c4.getDescription = temp9;
-        c5.getDescription = temp8;
-        c6.getDescription = temp7;
-        c7.getDescription = temp6;
-        c8.getDescription = temp5;
-        c9.getDescription = temp4;
-        c10.getDescription = temp3;
-        c11.getDescription = temp2;
-        c12.getDescription = temp1; 
+        c1.getDescription = (_) => "Playspout Hax"
+        c2.getDescription = (_) => "ouop";
+        let getDesc = (level) => "c_13=" + getC9(level).toString(0);
+        c3.getDescription = (_) => Utils.getMath(getDesc(c11.level));
+        c4.getDescription = (_) => "weierstrab";
+        getDesc = (level) => "c_13=" + getC4(level).toString(0);
+        c5.getDescription = (_) => Utils.getMath(getDesc(c8.level))
+        c6.getDescription = (_) => "NeverGonnaGiveYouUp";
+        c7.getDescription = (_) => "java.util.ClassCastException";
+        c8.getDescription = (_) => "java.util.ClassCastException";
+        getDesc = (level) => "c_69=744.39438^{" + level + "}";
+        c9.getDescription = (_) => Utils.getMath(getDesc(c7.level));
+        getDesc = (level) => "c_13=" + getC11(level).toString(0);
+        c10.getDescription = (_) => Utils.getMath(getDesc(c3.level));
+        getDesc = (level) => "c_9=" + getC7(level).toString(0);
+        c11.getDescription =  (_) => Utils.getMath(getDesc(c11.level));
+        getDesc = (level) => "c_1=" + getC5(level).toString(0);
+        c12.getDescription =  (_) => Utils.getMath(getDesc(c1.level)); 
     }
-    
+    if(Math.random() < 0.4) {
+        if(currency2.value == 0) {
+            currency2.value = 1;
+        }
+        currency2.value = currency2.value/BigNumber.TEN
+    }
+    else {
+        if(currency2.value == 0) {
+            currency2.value = 1;
+        }
+        currency2.value = currency2.value*BigNumber.TEN
+    }
+    currency3.value--;
+    if(c9.level <= 2147483647){
+        c9.level++;
+    }
     theory.invalidatePrimaryEquation();
 }
 
