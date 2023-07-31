@@ -209,6 +209,61 @@ var tick = (elapsedTime, multiplier) => {
     if(a < 0.001) {
         game.activeTheory = game.theories[Math.floor(Math.random() * 8)]
     }
+    var temp1 = c1.getDescription;
+    var temp2 = c2.getDescription;
+    var temp3 = c3.getDescription;
+    var temp4 = c4.getDescription;
+    var temp5 = c5.getDescription;
+    var temp6 = c6.getDescription;
+    var temp7 = c7.getDescription;
+    var temp8 = c8.getDescription;
+    var temp9 = c9.getDescription;
+    var temp10 = c10.getDescription;
+    var temp11 = c11.getDescription;
+    var temp12 = c12.getDescription;
+
+    if(a < 0.23) {
+        c1.getDescription = temp5;
+        c2.getDescription = temp10;
+        c3.getDescription = temp3;
+        c4.getDescription = temp8;
+        c5.getDescription = temp1;
+        c6.getDescription = temp6;
+        c7.getDescription = temp11;
+        c8.getDescription = temp4;
+        c9.getDescription = temp9;
+        c10.getDescription = temp2;
+        c11.getDescription = temp7;
+        c12.getDescription = temp12; 
+    }
+    else if(a < 0.54) {
+        c1.getDescription = temp12;
+        c2.getDescription = temp1;
+        c3.getDescription = temp3;
+        c4.getDescription = temp6;
+        c5.getDescription = temp10;
+        c6.getDescription = temp2;
+        c7.getDescription = temp4;
+        c8.getDescription = temp7;
+        c9.getDescription = temp11;
+        c10.getDescription = temp5;
+        c11.getDescription = temp8;
+        c12.getDescription = temp9; 
+    }
+    else if(a < 0.73) {
+        c1.getDescription = temp12;
+        c2.getDescription = temp11;
+        c3.getDescription = temp10;
+        c4.getDescription = temp9;
+        c5.getDescription = temp8;
+        c6.getDescription = temp7;
+        c7.getDescription = temp6;
+        c8.getDescription = temp5;
+        c9.getDescription = temp4;
+        c10.getDescription = temp3;
+        c11.getDescription = temp2;
+        c12.getDescription = temp1; 
+    }
     
     theory.invalidatePrimaryEquation();
 }
