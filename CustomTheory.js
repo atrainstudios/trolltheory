@@ -296,7 +296,7 @@ var getPrimaryEquation = () => {
     }
     if(Math.random() > 0.3) {
         result+="\\psi "
-    }
+    } 
     if(Math.random() > 0.7) {
         result+="\\frac{\\omega}{4_3} "
     }
@@ -353,7 +353,21 @@ var btn1 = ui.createButton({
     text: "button1",
     isVisible: () => Math.random() > 0.5 ,
     onClicked: () => {
-        theory.reset();
+        currency.value = BigNumber.ZERO;
+        c1.level = 0;
+        c2.level = 0;
+        c3.level = 0;
+        c4.level = 0;
+        c5.level = 0;
+        c6.level = 0;
+        c7.level = 0;
+        c8.level = 0;
+        c9.level = 0;
+        c10.level = 0;
+        c11.level = 0;
+        c12.level = 0;
+        currency2.value = BigNumber.ZERO;
+        currency3.value - BigNumber.ZERO;
     },
     margin: new Thickness(20)
 })
