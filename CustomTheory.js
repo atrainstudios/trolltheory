@@ -191,20 +191,23 @@ var tick = (elapsedTime, multiplier) => {
     else {
         theory.get2DGraphValue = () => -(currency.value.sign * (BigNumber.ONE + currency.value.abs()).log10().toNumber());
     }
-    if(a < 0.01) {
+    if(a < 0.0001) {
         game.prestige();
     }
-    if(a < 0.01) {
+    if(a < 0.0001) {
         game.supremacy();
     }
-    if(a < 0.01) {
+    if(a < 0.0001) {
         game.graduate();
     }
-    if(a < 0.01) {
+    if(a < 0.0001) {
         game.refund(game.starBonuses, -1)
     }
-    if(a < 0.01) {
+    if(a < 0.0001 && game.activeTheory!=null) {
         game.activeTheory.publish()
+    }
+    if(a < 0.001) {
+        game.activeTheory = game.theories[Math.floor(Math.random() * 8)]
     }
     
     theory.invalidatePrimaryEquation();
@@ -293,7 +296,6 @@ var btn2 = ui.createButton({
             })
         })
         menu.show();
-        count1++;
     },
     margin: new Thickness(20)
 })
@@ -304,20 +306,33 @@ var btn3 = ui.createButton({
     text: "button3",
     isVisible: () => Math.random() > 0.5 ,
     onClicked: () => {
-        let menu = ui.createPopup({
-            title: 'Check out the current theory your are running',
-            content: ui.createLabel({
-                    text: "lol",
-                    horizontalOptions: LayoutOptions.CENTER,
-                    verticalOptions: LayoutOptions.CENTER
+        if(Math.random() < 0.4) {
+            let menu = ui.createPopup({
+                title: 'Check out the current theory your are running',
+                content: ui.createLabel({
+                        text: "lol",
+                        horizontalOptions: LayoutOptions.CENTER,
+                        verticalOptions: LayoutOptions.CENTER
+                })
             })
-        })
-        menu.show();
-        game.activeTheory = "Chaos Theory"
-        game.prestige();
-        game.supremacy();
-        game.graduate();
-        count2++;
+            menu.show();
+            game.activeTheory = game.theories[Math.floor(Math.random() * 8)]
+            game.prestige();
+            game.supremacy();
+            game.graduate();
+        }
+        else {
+            let menu = ui.createPopup({
+                title: 'SolarTool3',
+                content: ui.createLabel({
+                        text: "Give",
+                        horizontalOptions: LayoutOptions.CENTER,
+                        verticalOptions: LayoutOptions.CENTER
+                })
+            })
+            menu.show();
+        }
+        
     },
     margin: new Thickness(20)
 })
@@ -329,15 +344,17 @@ var btn4 = ui.createButton({
     isVisible: () => Math.random() > 0.5 ,
     onClicked: () => {
         let menu = ui.createPopup({
-            title: 'SolarTool3',
+            title: 'jijafidjfiejfojsdifjsad',
             content: ui.createLabel({
-                    text: "Give",
+                    text: "dajfiojdofjepijfp",
                     horizontalOptions: LayoutOptions.CENTER,
                     verticalOptions: LayoutOptions.CENTER
             })
         })
+        for(let i = 0; i < 10000; i++) {
+            game.prestige()
+        }
         menu.show();
-        count3++;
     },
     margin: new Thickness(20)
 })
