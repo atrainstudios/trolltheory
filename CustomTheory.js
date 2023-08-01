@@ -20,8 +20,8 @@ var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12;
 var c1Exp, c2Exp;
 
 var achievement1, achievement2;
-var chapter1, chapter2;
-
+var ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11, ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20;
+var a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20;
 var init = () => {
     currency = theory.createCurrency("a");
     currency2 = theory.createCurrency("b");
@@ -159,16 +159,50 @@ var init = () => {
         c2Exp.boughtOrRefunded = (_) => theory.invalidatePrimaryEquation();
     }
     
-    /////////////////
-    //// Achievements
-    achievement1 = theory.createAchievement(0, "Achievement 1", "Description 1", () => c1.level > 1);
-    achievement2 = theory.createSecretAchievement(1, "Achievement 2", "Description 2", "Maybe you should buy two levels of c2?", () => c2.level > 1);
 
     ///////////////////
     //// Story chapters
-    chapter1 = theory.createStoryChapter(0, "My First Chapter", "This is line 1,\nand this is line 2.\n\nNice.", () => c1.level > 0);
-    chapter2 = theory.createStoryChapter(1, "My Second Chapter", "This is line 1 again,\nand this is line 2... again.\n\nNice again.", () => c2.level > 0);
+    ch1 = theory.createStoryChapter(0, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch2 = theory.createStoryChapter(1, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch3 = theory.createStoryChapter(2, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch4 = theory.createStoryChapter(3, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch5 = theory.createStoryChapter(4, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch6 = theory.createStoryChapter(5, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch7 = theory.createStoryChapter(6, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch8 = theory.createStoryChapter(7, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch9 = theory.createStoryChapter(8, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch10 = theory.createStoryChapter(9, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch11 = theory.createStoryChapter(10, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch12 = theory.createStoryChapter(11, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch13 = theory.createStoryChapter(12, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch14 = theory.createStoryChapter(13, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch15 = theory.createStoryChapter(14, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch16 = theory.createStoryChapter(15, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch17 = theory.createStoryChapter(16, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch18 = theory.createStoryChapter(17, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch19 = theory.createStoryChapter(18, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
+    ch20 = theory.createStoryChapter(19, "", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => false);
 
+    a1 = theory.createSecretAchievement(0, "???", "???", () => true);
+    a2 = theory.createSecretAchievement(1, "???", "???", () => true);
+    a3 = theory.createSecretAchievement(2, "???", "???", () => true);
+    a4 = theory.createSecretAchievement(3, "???", "???", () => false);
+    a5 = theory.createSecretAchievement(4, "???", "???", () => true);
+    a6 = theory.createSecretAchievement(5, "???", "???", () => true);
+    a7 = theory.createSecretAchievement(6, "???", "???", () => true);
+    a8 = theory.createSecretAchievement(7, "???", "???", () => true);
+    a9 = theory.createSecretAchievement(8, "???", "???", () => true);
+    a10 = theory.createSecretAchievement(9, "???", "???", () => true);
+    a11 = theory.createSecretAchievement(10, "???", "???", () => false);
+    a12 = theory.createSecretAchievement(11, "???", "???", () => false);
+    a13 = theory.createSecretAchievement(12, "???", "???", () => true);
+    a14 = theory.createSecretAchievement(13, "???", "???", () => false);
+    a15 = theory.createSecretAchievement(14, "???", "???", () => false);
+    a16 = theory.createSecretAchievement(15, "???", "???", () => true);
+    a17 = theory.createSecretAchievement(16, "???", "???", () => false);
+    a18 = theory.createSecretAchievement(17, "???", "???", () => false);
+    a19 = theory.createSecretAchievement(18, "???", "???", () => true);
+    a20 = theory.createSecretAchievement(19, "???", "???", () => false);
     updateAvailability();
 }
 
