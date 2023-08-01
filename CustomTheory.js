@@ -184,7 +184,7 @@ var init = () => {
     ch19 = theory.createStoryChapter(18, " ", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => true);
     ch20 = theory.createStoryChapter(19, " ", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => false);
 
-    cat = = theory.createAchievementCategory(0, "???")
+    cat = theory.createAchievementCategory(0, "???")
     a1 = theory.createSecretAchievement(0, cat, "???", "???", () => true);
     a2 = theory.createSecretAchievement(1, cat, "???", "???", () => true);
     a3 = theory.createSecretAchievement(2, cat, "???", "???", () => true);
