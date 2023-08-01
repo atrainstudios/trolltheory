@@ -185,26 +185,26 @@ var init = () => {
     ch20 = theory.createStoryChapter(19, " ", "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", () => false);
 
     cat = = theory.createAchievementCategory(0, "???")
-    a1 = theory.createSecretAchievement(0, cat, "???", () => true);
-    a2 = theory.createSecretAchievement(1, cat, "???", () => true);
-    a3 = theory.createSecretAchievement(2, cat, "???", () => true);
-    a4 = theory.createSecretAchievement(3, cat, "???", () => false);
-    a5 = theory.createSecretAchievement(4, cat, "???", () => true);
-    a6 = theory.createSecretAchievement(5, cat, "???", () => true);
-    a7 = theory.createSecretAchievement(6, cat, "???", () => true);
-    a8 = theory.createSecretAchievement(7, cat, "???", () => true);
-    a9 = theory.createSecretAchievement(8,cat, "???", () => true);
-    a10 = theory.createSecretAchievement(9, cat, "???", () => true);
-    a11 = theory.createSecretAchievement(10, cat, "???", () => false);
-    a12 = theory.createSecretAchievement(11, cat, "???", () => false);
-    a13 = theory.createSecretAchievement(12, cat, "???", () => true);
-    a14 = theory.createSecretAchievement(13, cat, "???", () => false);
-    a15 = theory.createSecretAchievement(14, cat, "???", () => false);
-    a16 = theory.createSecretAchievement(15, cat, "???", () => true);
-    a17 = theory.createSecretAchievement(16, cat, "???", () => false);
-    a18 = theory.createSecretAchievement(17, cat, "???", () => false);
-    a19 = theory.createSecretAchievement(18, cat, "???", () => true);
-    a20 = theory.createSecretAchievement(19, cat, "???", () => false);
+    a1 = theory.createSecretAchievement(0, cat, "???", "???", () => true);
+    a2 = theory.createSecretAchievement(1, cat, "???", "???", () => true);
+    a3 = theory.createSecretAchievement(2, cat, "???", "???", () => true);
+    a4 = theory.createSecretAchievement(3, cat, "???", "???", () => false);
+    a5 = theory.createSecretAchievement(4, cat, "???", "???", () => true);
+    a6 = theory.createSecretAchievement(5, cat, "???", "???", () => true);
+    a7 = theory.createSecretAchievement(6, cat, "???", "???", () => true);
+    a8 = theory.createSecretAchievement(7, cat, "???", "???", () => true);
+    a9 = theory.createSecretAchievement(8,cat, "???", "???", () => true);
+    a10 = theory.createSecretAchievement(9, cat, "???", "???", () => true);
+    a11 = theory.createSecretAchievement(10, cat, "???", "???", () => false);
+    a12 = theory.createSecretAchievement(11, cat, "???", "???", () => false);
+    a13 = theory.createSecretAchievement(12, cat, "???", "???", () => true);
+    a14 = theory.createSecretAchievement(13, cat, "???", "???", () => false);
+    a15 = theory.createSecretAchievement(14, cat, "???", "???", () => false);
+    a16 = theory.createSecretAchievement(15, cat, "???", "???", () => true);
+    a17 = theory.createSecretAchievement(16, cat, "???", "???", () => false);
+    a18 = theory.createSecretAchievement(17, cat, "???", "???", () => false);
+    a19 = theory.createSecretAchievement(18, cat, "???", "???", () => true);
+    a20 = theory.createSecretAchievement(19, cat, "???", "???", () => false);
     updateAvailability();
 }
 
